@@ -20,11 +20,15 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: [
-                            "@babel/preset-react"
+                            "@babel/preset-react",
+                            "@babel/preset-env"
                         ]
                     }
                 }
-            }
+            },
+            { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+            { test: /\.(png|woff|woff2|eot|ttf|svg)$/, use: ['url-loader?limit=100000'] }
+
         ]
     },
     output: {

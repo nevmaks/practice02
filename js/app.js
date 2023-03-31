@@ -1,18 +1,42 @@
+import "bootstrap/dist/css/bootstrap.css";
+
 import React from "react";
 import ReactDOM from "react-dom/client"
 
-function JsxApp () {
+function GridComponent() {
     return (
-        <div>
-            <div>Hi, I'm div</div>
-            <h1>Hi, I'm header inside div</h1>
-            <ul>
-                <li>Hi, I'm list item inside list inside div</li>
-                <li>Hi, I'm list item inside list inside div</li>
-            </ul>
-        </div>
+        <table className="table table-condensed">
+            <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+            </tr>
+            </tbody>
+        </table>
     )
 }
 
 const root = ReactDOM.createRoot(document.getElementById("app"));
-root.render(<JsxApp/>);
+
+root.render(
+    <GridComponent/>
+);
+
