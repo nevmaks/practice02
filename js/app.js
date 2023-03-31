@@ -1,15 +1,18 @@
-let app = React.createElement('div', {},
-    React.createElement('h1', {}, "Hi, I'm header inside div"),
-    React.createElement('ul', {},
-        React.createElement('li', {},
-            React.createElement('h2', {}, "Hi, I'm list item inside list inside div")
-        ),
-        React.createElement('li', {},
-            React.createElement('h2', {}, "Hi, I'm list item inside list inside div")
-        )
+import React from "react";
+import ReactDOM from "react-dom/client"
+
+function JsxApp () {
+    return (
+        <div>
+            <div>Hi, I'm div</div>
+            <h1>Hi, I'm header inside div</h1>
+            <ul>
+                <li>Hi, I'm list item inside list inside div</li>
+                <li>Hi, I'm list item inside list inside div</li>
+            </ul>
+        </div>
     )
-);
+}
 
-const root = ReactDOM.createRoot(document.getElementById('app'));
-root.render(app);
-
+const root = ReactDOM.createRoot(document.getElementById("app"));
+root.render(<JsxApp/>);
